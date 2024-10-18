@@ -15,16 +15,16 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-white text-xl font-bold">
+    <nav className="bg-gray-800 shadow-md">
+      <div className="container mx-auto flex justify-between items-center p-4">
+        <Link to="/" className="text-white text-2xl font-bold hover:text-gray-300 transition">
           Expense Tracker
         </Link>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-6">
           {user ? (
             <li>
               <button
-                className="text-white hover:text-gray-300"
+                className="text-white hover:text-red-400 transition duration-300 transform hover:scale-105"
                 onClick={onLogout}
               >
                 Logout
@@ -33,12 +33,18 @@ function Navbar() {
           ) : (
             <>
               <li>
-                <Link to="/login" className="text-white hover:text-gray-300">
+                <Link
+                  to="/login"
+                  className="text-white transition duration-300 transform hover:scale-105 hover:bg-gray-700 rounded-lg px-4 py-2 shadow-sm"
+                >
                   Login
                 </Link>
               </li>
               <li>
-                <Link to="/register" className="text-white hover:text-gray-300">
+                <Link
+                  to="/register"
+                  className="text-white transition duration-300 transform hover:scale-105 hover:bg-gray-700 rounded-lg px-4 py-2 shadow-sm"
+                >
                   Register
                 </Link>
               </li>
