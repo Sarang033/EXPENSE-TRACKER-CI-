@@ -1,4 +1,4 @@
-// File: frontend/src/components/ExpenseChart.js
+
 import React from 'react';
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
