@@ -28,10 +28,12 @@ function ExpenseChart({ expenses }) {
 
   const totalExpenses = expenses.reduce((total, expense) => total + expense.amount, 0);
 
+  
   return (
     <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
       <h2 className="text-2xl font-bold mb-4">Expense Analysis</h2>
-      <p className="text-xl mb-4">Total Expenses: Rs.{totalExpenses.toFixed(2)}</p>
+      <p className="text-xl mb-4">Total Expenses: ₹ {totalExpenses.toFixed(2)}</p>
+      {/* <p className="text-xl mb-4">Money Spent: ₹ {moneySpent.toFixed(2)}</p>  */}
       <div className="mb-8">
         <h3 className="text-xl font-bold mb-2">Expense Distribution</h3>
         <ResponsiveContainer width="100%" height={300}>

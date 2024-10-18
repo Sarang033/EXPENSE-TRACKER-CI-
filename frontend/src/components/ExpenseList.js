@@ -18,11 +18,11 @@ function ExpenseList({ expenses }) {
             </div>
             <div className="flex items-center">
               <span className="text-sm font-medium text-gray-900 mr-4">
-                Rs. {expense.amount.toFixed(2)}
+              ₹ {expense.amount.toFixed(2)}
               </span>
               <button
                 onClick={() => dispatch(deleteExpense(expense._id))}
-                className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                className="bg-red-500 hover:bg-red-700 rounded px-4 py-2 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
               >
                 Delete
               </button>
