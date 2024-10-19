@@ -71,8 +71,3 @@ jobs:
         if: steps.changes.outputs.src == 'true'
         working-directory: ./backend
         run: npm install
-
-      - name: Build backend
-        if: steps.changes.outputs.src == 'true'
-        working-directory: ./backend
-        run: npm run build
