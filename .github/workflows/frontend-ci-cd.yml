@@ -50,6 +50,8 @@ jobs:
         VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
       run: |
         cd frontend
+        rm -rf .vercel
+        vercel link --token=$VERCEL_TOKEN --project=$VERCEL_PROJECT_ID
         vercel pull --yes --environment=production --token=$VERCEL_TOKEN
         vercel build --prod --token=$VERCEL_TOKEN
         vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
